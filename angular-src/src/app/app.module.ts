@@ -16,13 +16,21 @@ import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthGuard} from './guards/auth.guard';
+import { GerenciadorComponent } from './components/gerenciador/gerenciador.component';
+import { ListaComponent } from './components/lista/lista.component';
+import { MainComponent } from './components/main/main.component';
+import { AddCategoriaComponent } from './components/add-categoria/add-categoria.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]}
+  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path:'gerenciador', component: GerenciadorComponent, },
+  {path: 'add-categoria', component: AddCategoriaComponent },
+  {path: 'principal', component: PrincipalComponent}
 ]
 
 @NgModule({
@@ -33,7 +41,12 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    GerenciadorComponent,
+    ListaComponent,
+    MainComponent,
+    AddCategoriaComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

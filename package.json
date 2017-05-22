@@ -13,6 +13,7 @@
     "cors": "*",
     "express": "*",
     "jsonwebtoken": "*",
+    "mongodb": "^2.2.26",
     "mongoose": "*",
     "nodemon": "^1.11.0",
     "passport": "*",

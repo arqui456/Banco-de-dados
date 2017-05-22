@@ -5,6 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+var db;
 
 // Connect to Database
 mongoose.connect(config.database);
@@ -24,6 +25,8 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const users = require('./routes/users');
+const filmes = require('./routes/filmes');
+const categorias = require('./routes/categorias');
 
 // cors middleware
 app.use(cors());
@@ -43,6 +46,8 @@ require('./config/passport')(passport);
 
 
 app.use('/users', users);
+app.use('/filmes', filmes);
+app.use('/categorias', categorias);
 
 
 //Index Route
@@ -53,6 +58,18 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
+app.get('/', (req, res) => {
+	var cursor = db.collection('filmes').find()
+});
+
+app.post('/filmes', (req, res) => {
+  console.log(req.body)
+});
+
+db.collection('filmes').find().toArray(function(err, results) {
+	console.log(results)
+});	
 
 
 app.listen(port, () =>{

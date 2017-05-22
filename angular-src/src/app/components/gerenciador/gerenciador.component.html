@@ -1,0 +1,33 @@
+<h2 class="page-header">Adicionar filme</h2>
+<div class="container">
+<form (submit)="onRegisterSubmit()" role="form" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-1" for="inputEmail1">Nome do filme</label>
+        <div class="col-sm-5"><input type="text" [(ngModel)]="title" name="title" class="form-control"></div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-1" for="inputPassword1">Categoria</label>
+        <div class="col-sm-5"><input type="text" [(ngModel)]="categoria" name="categoria" class="form-control"></div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-12" for="TextArea">Descricao</label>
+        <div class="col-sm-6"><textarea class="form-control" [(ngModel)]="descricao" name="descricao"></textarea></div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3"><label>Avaliação</label><input type="text" [(ngModel)]="avaliacao" name="avaliacao" class="form-control"></div>
+        <div class="col-sm-3"><label>Trailer</label><input type="text" [(ngModel)]="trailer" name="trailer" class="form-control"></div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-12">Cenas</label>
+        <div class="col-sm-2"><input type="text" [(ngModel)]="cena1" name="cena1" class="form-control"><div class="help">cena1</div></div>
+        <div class="col-sm-2"><input type="text" [(ngModel)]="cena2" name="cena2" class="form-control"><div class="help">cena2</div></div>
+        <div class="col-sm-2"><input type="text" [(ngModel)]="cena3" name="cena3" class="form-control"><div class="help">cena3</div></div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-6">
+            <button type="submit" class="btn btn-info pull-right">Salvar</button>
+        </div>
+    </div>
+</form>
+<hr>
+</div>
