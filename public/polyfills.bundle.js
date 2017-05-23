@@ -275,7 +275,9 @@ module.exports = function(it){
 /* 35 */,
 /* 36 */,
 /* 37 */,
-/* 38 */
+/* 38 */,
+/* 39 */,
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
@@ -290,8 +292,6 @@ module.exports = function(KEY, exec){
 };
 
 /***/ }),
-/* 39 */,
-/* 40 */,
 /* 41 */,
 /* 42 */,
 /* 43 */
@@ -4560,7 +4560,7 @@ $export($export.S + $export.F * !__webpack_require__(18), 'Object', {definePrope
 var isObject = __webpack_require__(7)
   , meta     = __webpack_require__(57).onFreeze;
 
-__webpack_require__(38)('freeze', function($freeze){
+__webpack_require__(40)('freeze', function($freeze){
   return function freeze(it){
     return $freeze && isObject(it) ? $freeze(meta(it)) : it;
   };
@@ -4574,7 +4574,7 @@ __webpack_require__(38)('freeze', function($freeze){
 var toIObject                 = __webpack_require__(28)
   , $getOwnPropertyDescriptor = __webpack_require__(58).f;
 
-__webpack_require__(38)('getOwnPropertyDescriptor', function(){
+__webpack_require__(40)('getOwnPropertyDescriptor', function(){
   return function getOwnPropertyDescriptor(it, key){
     return $getOwnPropertyDescriptor(toIObject(it), key);
   };
@@ -4585,7 +4585,7 @@ __webpack_require__(38)('getOwnPropertyDescriptor', function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
-__webpack_require__(38)('getOwnPropertyNames', function(){
+__webpack_require__(40)('getOwnPropertyNames', function(){
   return __webpack_require__(353).f;
 });
 
@@ -4597,7 +4597,7 @@ __webpack_require__(38)('getOwnPropertyNames', function(){
 var toObject        = __webpack_require__(29)
   , $getPrototypeOf = __webpack_require__(47);
 
-__webpack_require__(38)('getPrototypeOf', function(){
+__webpack_require__(40)('getPrototypeOf', function(){
   return function getPrototypeOf(it){
     return $getPrototypeOf(toObject(it));
   };
@@ -4610,7 +4610,7 @@ __webpack_require__(38)('getPrototypeOf', function(){
 // 19.1.2.11 Object.isExtensible(O)
 var isObject = __webpack_require__(7);
 
-__webpack_require__(38)('isExtensible', function($isExtensible){
+__webpack_require__(40)('isExtensible', function($isExtensible){
   return function isExtensible(it){
     return isObject(it) ? $isExtensible ? $isExtensible(it) : true : false;
   };
@@ -4623,7 +4623,7 @@ __webpack_require__(38)('isExtensible', function($isExtensible){
 // 19.1.2.12 Object.isFrozen(O)
 var isObject = __webpack_require__(7);
 
-__webpack_require__(38)('isFrozen', function($isFrozen){
+__webpack_require__(40)('isFrozen', function($isFrozen){
   return function isFrozen(it){
     return isObject(it) ? $isFrozen ? $isFrozen(it) : false : true;
   };
@@ -4636,7 +4636,7 @@ __webpack_require__(38)('isFrozen', function($isFrozen){
 // 19.1.2.13 Object.isSealed(O)
 var isObject = __webpack_require__(7);
 
-__webpack_require__(38)('isSealed', function($isSealed){
+__webpack_require__(40)('isSealed', function($isSealed){
   return function isSealed(it){
     return isObject(it) ? $isSealed ? $isSealed(it) : false : true;
   };
@@ -4658,7 +4658,7 @@ $export($export.S, 'Object', {is: __webpack_require__(552)});
 var toObject = __webpack_require__(29)
   , $keys    = __webpack_require__(84);
 
-__webpack_require__(38)('keys', function(){
+__webpack_require__(40)('keys', function(){
   return function keys(it){
     return $keys(toObject(it));
   };
@@ -4672,7 +4672,7 @@ __webpack_require__(38)('keys', function(){
 var isObject = __webpack_require__(7)
   , meta     = __webpack_require__(57).onFreeze;
 
-__webpack_require__(38)('preventExtensions', function($preventExtensions){
+__webpack_require__(40)('preventExtensions', function($preventExtensions){
   return function preventExtensions(it){
     return $preventExtensions && isObject(it) ? $preventExtensions(meta(it)) : it;
   };
@@ -4686,7 +4686,7 @@ __webpack_require__(38)('preventExtensions', function($preventExtensions){
 var isObject = __webpack_require__(7)
   , meta     = __webpack_require__(57).onFreeze;
 
-__webpack_require__(38)('seal', function($seal){
+__webpack_require__(40)('seal', function($seal){
   return function seal(it){
     return $seal && isObject(it) ? $seal(meta(it)) : it;
   };

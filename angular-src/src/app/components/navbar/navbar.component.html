@@ -24,7 +24,7 @@
                 <ul class="dropdown-menu">
                   <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/gerenciador']">Adicionar filme</a></li>
                   <li><a [routerLink]="['/add-categoria']">Adicionar categoria</a></li>
-                  <li><a [routerLink]="['/dashboard']">Lista de filmes</a></li>
+                  <li><a [routerLink]="['/lista']">Lista de filmes</a></li>
                 </ul>
             </li>
            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/profile']">Perfil</a></li>

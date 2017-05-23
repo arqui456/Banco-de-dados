@@ -39,4 +39,8 @@ router.post('/authenticate', (req , res, next) => {
 	});
 });
 
+router.get('/lista', (req , res, next) => {
+	res.json({filme: req.filme});
+});
+
 module.exports = router;

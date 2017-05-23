@@ -30,7 +30,8 @@ const appRoutes: Routes = [
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path:'gerenciador', component: GerenciadorComponent, },
   {path: 'add-categoria', component: AddCategoriaComponent },
-  {path: 'principal', component: PrincipalComponent}
+  {path: 'principal', component: PrincipalComponent},
+  {path: 'lista', component: ListaComponent }
 ]
 
 @NgModule({
